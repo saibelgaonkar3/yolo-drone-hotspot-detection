@@ -1,0 +1,56 @@
+import torch
+import cv2
+import time
+import csv
+from datetime import datetime
+import random  # Used here to mock GPS values
+
+# Load trained YOLOv5 model
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')
+
+# Start webcam (use video path if needed)
+cap = cv2.VideoCapture(0)
+
+# Prepare CSV for telemetry logging
+with open('telemetry_log.csv', mode='w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['Timestamp', 'Label', 'Confidence', 'Latitude', 'Longitude'])
+
+    print("[INFO] Running YOLOv5 model... Press 'q' to quit.")
+    while cap.isOpened():
+        success, frame = cap.read()
+        if not success:
+            break
+
+        # Run inference
+        results = model(frame)
+
+        # Loop over detections
+        for *box, conf, cls in results.xyxy[0]:
+            if conf >= 0.5:
+                label = model.names[int(cls)]
+                confidence = float(conf)
+                timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+                # Mock GPS values (replace with real GPS if needed)
+                latitude = 18.5204 + random.uniform(-0.0005, 0.0005)
+                longitude = 73.8567 + random.uniform(-0.0005, 0.0005)
+
+                # Log telemetry
+                writer.writerow([timestamp, label, f"{confidence:.2f}", latitude, longitude])
+                print(f"[{timestamp}] {label} ({confidence:.2f}) at ({latitude:.5f}, {longitude:.5f})")
+
+                # Draw bounding box
+                x1, y1, x2, y2 = map(int, box)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.putText(frame, f'{label} {confidence:.2f}', (x1, y1 - 10),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+
+        cv2.imshow('YOLOv5 Telemetry', frame)
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+cap.release()
+cv2.destroyAllWindows()
+print("[INFO] Telemetry logged to telemetry_log.csv")
