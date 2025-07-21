@@ -9,7 +9,11 @@ This repository documents my work on real-time object detection using YOLOv5 in 
 
 **Team Phoenix – Drone Club, MIT-WPU**
 
-Trained a custom YOLOv5 model to detect and count visual hotspots in drone-captured aerial imagery.
+1) Trained a custom YOLOv5 model to detect and count visual hotspots in drone-captured aerial imagery.
+2) Classification of shapes: circle, triangle, square
+hotspot dataset: https://drive.google.com/drive/folders/1CqV3xo4GNSLW-X3P4zRiQwx5ixkLLGUO?usp=drive_link
+shapes dataset: https://universe.roboflow.com/purasuas/classifying-shapes
+
 
 ### 🔧 Key Details
 - **Tools**: YOLOv5, PyTorch, OpenCV, LabelImg  
@@ -51,6 +55,7 @@ Building a YOLOv5-powered **Android app** that performs on-device object detecti
 - **CameraX API** for real-time frame analysis  
 - **FusedLocationProviderClient** for precise location  
 - Sends detection data + location to **Firebase Realtime Database**
+- Used android studio to build app
 
 ### 🔗 Use Case
 Designed for rescue workers and field teams to detect humans and send geo-tagged alerts in real-time without needing cloud inference or heavy hardware.
@@ -63,5 +68,3 @@ Designed for rescue workers and field teams to detect humans and send geo-tagged
 - Collaborate with disaster relief agencies for field trials
 
 ---
-
-> **Note:** All code, models, and training data are being redeveloped after local data loss. This repository documents workflow, design decisions, and deployment strategy.
