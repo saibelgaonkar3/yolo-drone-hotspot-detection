@@ -12,6 +12,7 @@ This repository documents my work on real-time object detection using YOLOv5 in 
 1) Trained a custom YOLOv5 model to detect and count visual hotspots in drone-captured aerial imagery.
 2) Classification of shapes: circle, triangle, square
 hotspot dataset: https://drive.google.com/drive/folders/1CqV3xo4GNSLW-X3P4zRiQwx5ixkLLGUO?usp=drive_link
+
 shapes dataset: https://universe.roboflow.com/purasuas/classifying-shapes
 
 
