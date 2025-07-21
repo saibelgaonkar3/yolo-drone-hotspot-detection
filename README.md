@@ -1,5 +1,5 @@
 # yolo-drone-hotspot-detection
-# 🚁 YOLOv5 Projects – Real-Time AI for Drones and Disaster Management
+#  YOLOv5 Projects – Real-Time AI for Drones and Disaster Management
 
 This repository documents my work on real-time object detection using YOLOv5 in drone-based and mobile-based applications. Projects focus on socially impactful use cases like aerial hotspot detection and disaster response.
 
