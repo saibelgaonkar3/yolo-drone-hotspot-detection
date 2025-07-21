@@ -5,7 +5,7 @@ This repository documents my work on real-time object detection using YOLOv5 in 
 
 ---
 
-## ✅ Project 1: YOLOv5 Aerial Hotspot Detection (Completed)
+##  Project 1: YOLOv5 Aerial Hotspot Detection (Completed)
 
 **Team Phoenix – Drone Club, MIT-WPU**
 
@@ -40,7 +40,7 @@ Timestamp           | Object_ID  | Label    | Confidence | Latitude   | Longitud
 
 ---
 
-## 🧭 Project 2: YOLOv5 for Human Detection in Disaster Zones (NIDAR 2025 – Ongoing)
+##  Project 2: YOLOv5 for Human Detection in Disaster Zones (NIDAR 2025 – Ongoing)
 
 Developing a real-time human detection system for disaster-struck areas using **YOLOv5**, as part of the **NIDAR 2025 AI/ML Challenge**.
 
@@ -58,7 +58,7 @@ Supports faster search and rescue by automating survivor identification in affec
 
 ---
 
-## 📱 Project 3: Android-Based Human Detection with GPS + Firebase (Ongoing)
+##  Project 3: Android-Based Human Detection with GPS + Firebase (Ongoing)
 
 Building a YOLOv5-powered **Android app** that performs on-device object detection and GPS location reporting.
 
