@@ -58,7 +58,7 @@ Supports faster search and rescue by automating survivor identification in affec
 
 ---
 
-##  Project 3: Android-Based Human Detection with GPS + Firebase (Ongoing)
+##  Project 3: Android-Based Human Detection with GPS + Firebase 
 
 Building a YOLOv5-powered **Android app** that performs on-device object detection and GPS location reporting.
 
@@ -74,7 +74,6 @@ Designed for rescue workers and field teams to detect humans and send geo-tagged
 
 ---
 
-## 🔮 What's Next
 - Integrate drone navigation + live detection stream  
 - Expand to multi-class detection for damage assessment  
 - Collaborate with disaster relief agencies for field trials
